@@ -1,15 +1,15 @@
 <!-- Unit 13 Project
 Requirements
-[  ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[ ✓ ] Two Interactive Drop-down Inputs 
+[ ✓  ] Two Different jQuery Animation Methods 
+[ ✓ ] Add Five CSS Declarations
+[ ✓ ] Include Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Google Font
+[ ✓ ] Feature 1 - Google Font
 [ no ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
-[ no ] Feature 4 - :hover Feature 
+[ ✓ ] Feature 4 - :hover Feature 
 [ no ] Feature 5 - Add an Additional Interactive Drop-down
 -->
 
@@ -21,64 +21,155 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>BuzzFeed</h1>
+
+    <p>
+      ⛔ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span id="quiz"> Quizzes </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span id="shop"> Shopping </span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span id="trend"> Trending News </span
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span id="celeb"> Celebrity </span
+      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span id="buzz"> Buzz Chat </span>
+    </p>
+
+    <br />
+
     <hr />
     <!-- Movie Question -->
-    <form id="movie-form">
+    <form id="first-question">
       <label>
-        🎥 What is my favorite movie?
-        <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+        Click On Your Favorite Option And We'll Tell You Something About Yourself
+        <br />
+        <br />
+        <select id="first-question-answer">
+          <option>Choose Option</option>
+          <option value="first-question1">ROYGBIV 🏳️‍🌈</option>
+          <option value="first-question2">Team Edward</option>
+          <option value="first-question3">Snakes</option>
+          <option value="first-question4">Hairspray</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
-    <div id="movie-result"></div>
+    <div id="first-question-result"></div>
+
     <hr />
-    <!-- Book Question -->
-    <form id="book-form">
+
+    <form id="second-question">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        We Can Exactly Guess Your Personality Based On Which Object You Choose
+        <br />
+        <br />
+        <select id="second-question-answer">
+          <option>Choose Option</option>
+          <option value="second-question1">A football</option>
+          <option value="second-question2">A flower</option>
+          <option value="second-question3">Hobama</option>
+          <option value="second-question4">Electrical outlet</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="second-question-result"></div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-      //Movie Question jQuery Code
-      $("#movie-form").on("submit", function (event) {
+      $("h1").hide();
+      $("p").hide();
+      $("h1").slideDown(1000, function(){ $("p").slideDown(800);});
+
+      $("#first-question").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#movie-answer");
+        var $answer = $("#first-question-answer");
         var answer = $answer.val();
 
-        if (answer === "movie1") {
-          $("#movie-result").text("YESSSS!");
-        } else {
-          $("#movie-result").text("Try Again!");
+        if (answer === "first-question1") {
+          $("#first-question-result").text("You are 73% gay!!");
+          $("#first-question-result")
+            .css(
+              "background-image",
+              "url(https://media.istockphoto.com/id/1304195707/photo/young-woman-waving-lgbti-flag.jpg?s=612x612&w=0&k=20&c=GXc15w7GHU6YlDjURAGlb9NhhPC4TuVfO4KKrN7L1KU="
+            )
+            .css("background-size", "contain");
+        }
+        if (answer === "first-question2") {
+          $("#first-question-result").text("You are a Gemini!");
+          $("#first-question-result")
+            .css(
+              "background-image",
+              "url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSe-yKuGAebcL7ijTs2_XqQBPD9dZIUoDtz4YW-6XObmxl7si5k"
+            )
+            .css("background-size", "contain");
+        }
+        if (answer === "first-question3") {
+          $("#first-question-result").text("Draco Malfoy is your boyfriend!");
+          $("#first-question-result")
+            .css(
+              "background-image",
+              "url( https://i.pinimg.com/736x/17/5f/69/175f697093e20ff6b86022788d664f5e.jpg"
+            )
+            .css("background-size", "contain");
+        }
+        if (answer === "first-question4") {
+          $("#first-question-result").text(
+            "Your celebrity doppelgänger is John Travolta!"
+          );
+          $("#first-question-result")
+            .css(
+              "background-image",
+              "url(https://www.cleveland.com/resizer/v2/C2TE3ATQEZE2XA4K5LU2M7G7AM.jpg?auth=f7ed4b718d142ef0020f5a6a9d83c8b71e60dcabcbaf1c23ed9c2957a2ae0341&width=500&quality=90"
+            )
+            .css("background-size", "contain");
         }
       });
 
       //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      $("#second-question").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#second-question-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
-        } else {
-          $("#book-result").text("Try Again!");
+        if (answer === "second-question1") {
+          $("#second-question-result").text("YOU'RE A NERDDDDD");
+          $("#second-question-result")
+            .css(
+              "background-image",
+              "url(https://t3.ftcdn.net/jpg/01/22/53/88/360_F_122538873_4PtXWBeuaQdj2URrc4JcmyurDCMy1ANw.jpg"
+            )
+            .css("background-size", "contain");
+        }
+        if (answer === "second-question2") {
+          $("#second-question-result").text("You are a butterfly!");
+          $("#second-question-result")
+            .css(
+              "background-image",
+              "url(https://t3.ftcdn.net/jpg/03/67/82/64/360_F_367826439_OuXjtHvxOUNTHrKsWjNwuMDLzXlLTTZh.jpg"
+            )
+            .css("background-size", "contain");
+        }
+        if (answer === "second-question3") {
+          $("#second-question-result").text("You are correct.");
+          $("#second-question-result")
+            .css(
+              "background-image",
+              "url( https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvaaEmBLx1F93D5ukfL95EX5tG4ig8eeWVJNOryuZCLkSu7EjCI46_-u5GPqHKwBR94Y&usqp=CAU"
+            )
+            .css("background-size", "contain");
+        }
+        if (answer === "second-question4") {
+          $("#second-question-result").text("Back away from the fork");
+          $("#second-question-result")
+            .css(
+              "background-image",
+              "url(https://media.istockphoto.com/id/1325835153/photo/selective-focus-on-edge-of-a-metal-fork-about-to-be-inserted-into-an-open-electrical-outlet.jpg?s=170667a&w=0&k=20&c=GyXtuaTNK84KG_PJUPxV_6Osow_Eyt85FOn7rwqToyA="
+            )
+            .css("background-size", "contain");
         }
       });
     </script>
