@@ -1,22 +1,133 @@
-#movie-result {
-  background: rgb(244, 98, 181);
-  border: 5px solid black;
-  font-size: 24px;
-  height: 160px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  width: 50%;
+  margin: auto;
 }
 
-#book-result {
-  background: rgb(196, 159, 255);
-  border: 5px solid black;
-  font-size: 24px;
-  height: 160px;
+h1 {
+  padding-top: 80px;
+  font-family: "Outfit", sans-serif;
+  font-size: 50px;
+  color: rgb(238, 51, 34);
+  text-align: center;
+}
+
+p {
+  color: rgb(127, 127, 127);
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  font-weight: 550;
+}
+
+label {
+  font-family: "Outfit", sans-serif;
+  color:rgb(33,33,33);
+  font-weight: 700;
+  font-size: 40px;
+}
+
+#first-question-result {
+  background: white;
+  justify-content: center;
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 550;
+  height: 350px;
   margin-top: 10px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  text-shadow: 0px 0px 15px white;
 }
+
+#second-question-result {
+  background: white;
+  justify-content: center;
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 550;
+  height: 350px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  text-shadow: 0px 0px 15px white;
+}
+
+
 
 hr {
-  height: 5px;
+  height: 3px;
   background-color: black;
+  margin-top: 80px;
+}
+
+select {
+  color: rgb(14, 100, 239);
+  background-color: white;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: solid rgb(14, 100, 239) 2px;
+}
+
+button {
+  color: rgb(14, 100, 239);
+  background-color: white;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 25px;
+  border: solid rgb(14, 100, 239) 2px;
+}
+
+select:hover {
+  color: white;
+  background-color: rgb(14, 100, 239);
+}
+
+button:hover {
+  color: white;
+  background-color: rgb(14, 100, 239);
+}
+
+select:active {
+  transform: translateY(3px);
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+#quiz:hover {
+  color: rgb(235, 83, 105);
+  cursor: pointer;
+}
+
+#shop:hover {
+  color: rgb(235, 83, 105);
+  cursor: pointer;
+}
+
+#trend:hover {
+  color: rgb(235, 83, 105);
+  cursor: pointer;
+}
+
+#celeb:hover {
+  color: rgb(235, 83, 105);
+  cursor: pointer;
+}
+
+#buzz:hover {
+  color: rgb(235, 83, 105);
+  cursor: pointer;
 }
